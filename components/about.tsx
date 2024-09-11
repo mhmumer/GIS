@@ -49,8 +49,8 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section  className="relative py-20 bg-white" id="about" ref={ref}>
-      <div  className="container mx-auto px-6 text-center">
+    <section className="relative py-20 bg-white" id="about" ref={ref}>
+      <div className="container mx-auto px-6 text-center">
         {/* Heading */}
         <motion.h2
           className="text-4xl font-bold text-gray-900 mb-12"
@@ -82,7 +82,7 @@ const AboutSection: React.FC = () => {
         </motion.p>
 
         {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-8 mt-12 max-w-5xl mx-auto">
           {/* Vision Card */}
           <motion.div
             className="bg-gray-50 border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-300 ease-in-out text-center h-80 w-[20rem] mx-auto"

@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
 
         {/* Navigation Links in the Center */}
         <div className="flex-1  text-center">
-          <div className="sm:hidden absolute right-2 mb-3 top-24">
+          <div className="sm:hidden ml-40">
             <Sheet>
               <SheetTrigger>
                 <IoMenu className="h-8 w-8" />
