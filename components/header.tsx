@@ -20,11 +20,13 @@ const Navbar: React.FC = () => {
       <div className=" mx-auto sm:px-6  py-3 flex justify-between items-center">
         {/* Logo on the Left */}
         <div className="flex items-center">
-          <Image
-            src={Logo}
-            alt="Global Industrial Services Logo"
-            className="h-[7rem] w-[10rem]"
-          />
+          <Link href={"/"}>
+            <Image
+              src={Logo}
+              alt="Global Industrial Services Logo"
+              className="h-[7rem] w-[10rem]"
+            />
+          </Link>
         </div>
 
         {/* Navigation Links in the Center */}
@@ -37,7 +39,7 @@ const Navbar: React.FC = () => {
               <SheetContent>
                 <SheetHeader>
                   <SheetTitle className="text-blue-950 pt-24 text-4xl tracking-wide font-sans leading-relaxed">
-                    <Link href="#about-us">
+                    <Link href="#about">
                       <p
                         className=" font-semibold 
                  cursor-pointer transition-all duration-700 active:underline active:underline-offset-2"
@@ -76,7 +78,7 @@ const Navbar: React.FC = () => {
           </div>
           <ul className="pr-16 justify-center space-x-10 text-lg font-sans hidden sm:flex">
             <li>
-              <Link href="#about-us">
+              <Link href="#about">
                 <p
                   className="hover:text-[#003385] font-semibold 
                  cursor-pointer transition-all duration-700 active:underline active:underline-offset-2"

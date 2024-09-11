@@ -49,8 +49,8 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="relative py-20 bg-white" id="about" ref={ref}>
-      <div className="container mx-auto px-6 text-center">
+    <section  className="relative py-20 bg-white" id="about" ref={ref}>
+      <div  className="container mx-auto px-6 text-center">
         {/* Heading */}
         <motion.h2
           className="text-4xl font-bold text-gray-900 mb-12"
