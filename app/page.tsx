@@ -2,6 +2,7 @@ import AboutSection from '@/components/about'
 import Banner from '@/components/banner'
 import Navbar from '@/components/header'
 import Hero from '@/components/hero'
+import OurClients from '@/components/scrolling'
 
 import React from 'react'
 
@@ -11,7 +12,8 @@ const page = () => {
       <Banner />
       <Navbar />
       <Hero />
-      <AboutSection/>
+      <OurClients/>
+      <AboutSection />
     </div>
   );
 }
