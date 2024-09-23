@@ -83,7 +83,7 @@ const ReviewsSection = () => {
         >
           <div className="text-center">
             <p className="text-lg font-bold">
-              "{reviews[currentReview].review}"
+              &quot;{reviews[currentReview].review}&quot;
             </p>
             <p className="mt-4 text-sm text-gray-400">
               - {reviews[currentReview].name}, {reviews[currentReview].role}
