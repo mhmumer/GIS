@@ -66,8 +66,13 @@ const ReviewsSection = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
-      <h2 className="text-4xl font-bold font-sans tracking-wider mb-16">What Our Clients Say</h2>
+    <div
+      id="reviews"
+      className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white w-full"
+    >
+      <h2 className="text-5xl font-bold font-sans text-center items-center justify-center leading-none tracking-wider mb-16">
+        What Our Clients Say.
+      </h2>
       <div className="w-full max-w-4xl p-4 ">
         <motion.div
           key={currentReview}

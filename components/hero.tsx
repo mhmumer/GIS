@@ -103,7 +103,7 @@ const HeroSlider: React.FC = () => {
   };
 
   return (
-    <section className={poppins.className}>
+    <section className={poppins.className} >
       <div className="relative h-screen w-full overflow-hidden">
         <AnimatePresence initial={false} custom={direction}>
           {/* Framer Motion Animation for Slide */}
