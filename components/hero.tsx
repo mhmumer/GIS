@@ -131,7 +131,7 @@ const HeroSlider: React.FC = () => {
             <div className="absolute inset-0 bg-black opacity-50"></div>
 
             {/* Slide Content */}
-            <div className="relative z-10 flex flex-col items-left justify-center h-full text-left text-white sm:pr-20 sm:pl-0 pl-4 max-w-6xl mx-auto">
+            <div className="relative z-10 flex flex-col items-left justify-center h-full text-left text-white sm:pr-16 sm:pl-0 pl-4 max-w-6xl mx-auto">
               <motion.h1
                 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-wide mb-4"
                 initial={{ opacity: 0, y: 50 }}
