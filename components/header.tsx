@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                         About Us
                       </p>
                     </Link>
-                    <Link href="#about-us">
+                    <Link href="#supplies">
                       <p
                         className=" font-semibold 
                  cursor-pointer transition-all duration-700 active:underline active:underline-offset-2"
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
                         Supplies
                       </p>
                     </Link>
-                    <Link href="#about-us">
+                    <Link href="#reviews">
                       <p
                         className=" font-semibold 
                  cursor-pointer transition-all duration-700 active:underline active:underline-offset-2"
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
                         Reviews
                       </p>
                     </Link>
-                    <Link href="#about-us">
+                    <Link href="#contact">
                       <p
                         className=" font-semibold 
                  cursor-pointer transition-all duration-700 active:underline active:underline-offset-2"
