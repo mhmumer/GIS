@@ -69,16 +69,20 @@ const AboutSection: React.FC = () => {
           variants={textVariant}
           transition={{ delay: 0.2 }}
         >
-          Established in 2010, <strong>Global Industrial Services (GIS)</strong>{" "}
-          is a leading engineering contracting firm specializing in industrial
-          fabrication. We provide a wide range of services, including the
-          fabrication of structural components, trolleys, movers, racks, machine
-          parts, and more. At GIS, we are committed to delivering the highest
-          level of customer satisfaction by combining innovative CAD design with
-          competitive pricing. Our team is driven by a shared dedication to
-          integrity, reliability, and creativity, ensuring that every project
-          meets the unique needs of our clients with precision and
-          professionalism.
+          <strong>Global Industrial Services (GIS)</strong> {" "}is a Supplies cum services firm operating in Pakistan for
+          over one decade. the company deals in product sales and related
+          services for Automation, HVAC Controls, Combustion Solutions, Pipe
+          Looping , Steel Structure Fabrications etc. GIS is incorporated in
+          Karachi-Pakistan since 2010 as a sole proprietorship company. Mr.
+          Muhammad Jawaid khan is the Founder, Owner and CEO of the company. GIS
+          operates in Pakistan and is registered with Federal Board of Revenue.
+          The primary business activities of GIS include Fabrication (Parts and
+          Machine spares) and Services for Engineering Installation. GIS
+          expanded its scope of products over the years and has very
+          successfully established the market for the its brands over the
+          business journey. Today, GIS maintains a diverse product portfolio and
+          strong technical presence to help its customers make informed
+          decisions and generate maximum value on their investments.
         </motion.p>
 
         {/* Cards Section */}

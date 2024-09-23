@@ -4,30 +4,51 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import HeroImage1 from "@/public/hero.jpg";
 import HeroImage2 from "@/public/hero2.jpg";
-import HeroImage3 from "@/public/hero3.jpg";
+import HeroImage3 from "@/public/hero3.png";
+import HeroImage4 from "@/public/hero4.jpg";
+import HeroImage5 from "@/public/hero5.jpg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  weight: "600",
+  style: "normal",
+  subsets: ["latin"], // Choose subsets based on your project
+});
 
 // Slider Data
 const slides = [
   {
     id: 1,
-    title: "Delivering Unmatched Industrial Solutions",
-    description:
-      "Committed to exceeding expectations through quality craftsmanship and innovative technology. We build lasting partnerships that drive success.",
-    imageUrl: HeroImage1,
+    title: "We're here to support your projects every step of the way.",
+
+    imageUrl: HeroImage5,
   },
   {
     id: 2,
-    title: "Building Relationships That Last",
-    description:
-      "Our focus on customer satisfaction and trust sets us apart. Through integrity and innovation, we shape the future of industrial fabrication.",
-    imageUrl: HeroImage2,
+    title:
+      "Trust us for reliable, committed support whenever you need it.",
+    imageUrl: HeroImage4,
   },
   {
     id: 3,
-    title: "Expanding Our Reach, Elevating Industry Standards",
+    title: "Fabrication ",
     description:
-      "Pioneering growth in fabrication by building strong foundations with key partners. Together, we are shaping the industrial landscape of tomorrow.",
+      "Providing high-quality, custom fabrication services for industrial projects.",
+    imageUrl: HeroImage2,
+  },
+  {
+    id: 4,
+    title: "Pipe Looping  ",
+    description:
+      "Expert pipe looping solutions designed for efficiency and durability.",
+    imageUrl: HeroImage2,
+  },
+  {
+    id: 5,
+    title: "HVAC Controls",
+    description:
+      "Advanced HVAC control systems for optimized environmental management.",
     imageUrl: HeroImage3,
   },
 ];
@@ -82,86 +103,87 @@ const HeroSlider: React.FC = () => {
   };
 
   return (
-    <div className="relative h-[90vh] w-full overflow-hidden">
-      <AnimatePresence initial={false} custom={direction}>
-        {/* Framer Motion Animation for Slide */}
-        <motion.div
-          key={currentSlide}
-          custom={direction}
-          className="absolute inset-0 w-full h-full"
-          variants={variants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
+    <section className={poppins.className}>
+      <div className="relative h-screen w-full overflow-hidden">
+        <AnimatePresence initial={false} custom={direction}>
+          {/* Framer Motion Animation for Slide */}
+          <motion.div
+            key={currentSlide}
+            custom={direction}
+            className="absolute inset-0 w-full h-full"
+            variants={variants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            {/* Background Image */}
+            <Image
+              src={slides[currentSlide].imageUrl}
+              alt={slides[currentSlide].title}
+              layout="fill"
+              className="h-screen w-screen"
+              objectFit="cover"
+              quality={80}
+              priority
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+
+            {/* Slide Content */}
+            <div className="relative z-10 flex flex-col items-left justify-center h-full text-left text-white sm:pr-20 sm:pl-0 pl-4 max-w-6xl mx-auto">
+              <motion.h1
+                className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-wide mb-4"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                {slides[currentSlide].title}
+              </motion.h1>
+              <motion.p
+                className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
+                {slides[currentSlide].description}
+              </motion.p>
+              {/* 3D Animated Button */}
+              <motion.a
+                href="#contact"
+                className="bg-orange-500 text-white font-semibold py-2 px-2 md:py-3 md:px-1 flex items-center justify-center group hover:bg-orange-600 w-40 mt-4"
+                whileTap={{
+                  scale: 0.95,
+                  translateY: 2,
+                  boxShadow: "0px 5px 5px rgba(0,0,0,0.2)",
+                }}
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1,  x:0 }}
+                transition={{ duration: 0.7, delay: 1.5 }}
+                
+              >
+                Contact Us{" "}
+                <IoIosArrowForward className="pl-2 h-6 w-7 group-hover:translate-x-1 font-black transition-all duration-500" />
+              </motion.a>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Arrows for Manual Slide Control */}
+        <button
+          onClick={() => changeSlide(-1)}
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 hidden sm:flex bg-black/40 p-2 md:left-5 text-white hover:bg-black/50 rounded-full "
         >
-          {/* Background Image */}
-          <Image
-            src={slides[currentSlide].imageUrl}
-            alt={slides[currentSlide].title}
-            layout="fill"
-            objectFit="cover"
-            quality={80}
-            priority
-          />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-
-          {/* Slide Content */}
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 max-w-2xl mx-auto">
-            <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
-              {slides[currentSlide].title}
-            </motion.h1>
-            <motion.p
-              className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-            >
-              {slides[currentSlide].description}
-            </motion.p>
-            {/* 3D Animated Button */}
-            <motion.a
-              href="#contact"
-              className="bg-orange-500 text-white font-semibold py-2 px-6 md:py-3 md:px-8 rounded-lg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              whileHover={{
-                scale: 1.05,
-                translateY: -5,
-                boxShadow: "0px 10px 10px rgba(0,0,0,0.5)",
-              }}
-              whileTap={{
-                scale: 0.95,
-                translateY: 2,
-                boxShadow: "0px 5px 5px rgba(0,0,0,0.2)",
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              Contact Us
-            </motion.a>
-          </div>
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Arrows for Manual Slide Control */}
-      <button
-        onClick={() => changeSlide(-1)}
-        className="absolute left-3 top-1/2 transform -translate-y-1/2 mt-40 sm:mt-0 bg-black/40 p-2 md:left-5 text-white hover:bg-black/50 rounded-full"
-      >
-        <IoIosArrowBack size={30} />
-      </button>
-      <button
-        onClick={() => changeSlide(1)}
-        className="absolute right-3 top-1/2 transform -translate-y-1/2 mt-40 sm:mt-0 bg-black/40 p-2 md:right-5 text-white hover:bg-black/50 rounded-full"
-      >
-        <IoIosArrowForward size={30} />
-      </button>
-    </div>
+          <IoIosArrowBack size={30} />
+        </button>
+        <button
+          onClick={() => changeSlide(1)}
+          className="absolute right-3 top-1/2 transform -translate-y-1/2 hidden sm:flex bg-black/40 p-2 md:right-5 text-white hover:bg-black/50 rounded-full"
+        >
+          <IoIosArrowForward size={30} />
+        </button>
+      </div>
+    </section>
   );
 };
 

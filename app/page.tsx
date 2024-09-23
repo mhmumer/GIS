@@ -1,8 +1,10 @@
 import AboutSection from '@/components/about'
 import Banner from '@/components/banner'
 import Navbar from '@/components/header'
-import Hero from '@/components/hero'
+import Slider from '@/components/hero'
 import OurClients from '@/components/scrolling'
+import ReviewsSection from '@/components/reviews'
+import { Contact } from '@/components/contact'
 
 import React from 'react'
 
@@ -11,9 +13,11 @@ const page = () => {
     <div>
       <Banner />
       <Navbar />
-      <Hero />
+      <Slider />
       <OurClients/>
       <AboutSection />
+      <ReviewsSection />
+      <Contact/>
     </div>
   );
 }

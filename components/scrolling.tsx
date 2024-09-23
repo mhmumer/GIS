@@ -20,7 +20,7 @@ const OurClients: React.FC = () => {
 
   return (
     <section className="py-8 bg-white">
-      <div className="container mx-auto text-center mb-4">
+      <div className="container mx-auto text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-800">Our Clients</h2>
         <p className="text-gray-600 mt-2">
           We are proud to have worked with some of the biggest companies.
@@ -34,7 +34,7 @@ const OurClients: React.FC = () => {
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{
-            duration: 20, // Adjust speed of scrolling
+            duration: 10, // Adjust speed of scrolling
             repeat: Infinity,
             ease: "linear",
           }}
@@ -44,7 +44,7 @@ const OurClients: React.FC = () => {
             (logo, index) => (
               <div
                 key={index}
-                className="w-28 h-auto my-auto items-center justify-center flex-shrink-0"
+                className="sm:w-28 w-24 h-auto my-auto items-center justify-center flex-shrink-0"
               >
                 <Image
                   src={logo}
