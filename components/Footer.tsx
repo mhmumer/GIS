@@ -14,9 +14,9 @@ const Footer: React.FC = () => {
           <Image
             src={Logo}
             alt="Company Logo"
-            className="h-[7rem] w-[11rem] mb-4 -ml-3"
+            className="h-[7rem] w-[11rem] mb-5 -ml-3 mt-6"
           />
-          <p className="max-w-[15rem]">
+          <p className="">
             Importer, Exporter, Engineering Contractor &amp; Fabrication Experts
           </p>
           <p>NTN: 1578568-8</p>
