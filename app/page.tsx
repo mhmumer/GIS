@@ -7,6 +7,7 @@ import ReviewsSection from '@/components/reviews'
 import { Contact } from '@/components/contact'
 
 import React from 'react'
+import Footer from '@/components/Footer'
 
 const page = () => {
   return (
@@ -17,7 +18,8 @@ const page = () => {
       <OurClients/>
       <AboutSection />
       <ReviewsSection />
-      <Contact/>
+      <Contact />
+      <Footer/>
     </div>
   );
 }
